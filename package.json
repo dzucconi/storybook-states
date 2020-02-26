@@ -1,7 +1,7 @@
 {
   "name": "storybook-states",
-  "version": "0.0.0",
-  "description": "Visually drive out component states",
+  "version": "0.0.0-development",
+  "description": "Visually drive out component states in Storybook",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -26,7 +26,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.8.2"
+    "typescript": "^3.8.2",
+    "semantic-release": "^17.0.4"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -34,9 +35,11 @@
   },
   "dependencies": {},
   "scripts": {
+    "build-storybook": "build-storybook",
     "build": "yarn clean && tsc -p .",
     "clean": "rm -rf dist",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "prepublishOnly": "yarn build",
+    "semantic-release": "semantic-release",
+    "storybook": "start-storybook -p 6006"
   }
 }
