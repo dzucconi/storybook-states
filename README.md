@@ -35,6 +35,8 @@ export const Example = () => (
 );
 ```
 
+![Example](http://static.damonzucconi.com/_capture/FzbX9gN9Zdyl.png)
+
 ## Interface
 
 ```typescript
