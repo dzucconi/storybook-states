@@ -5,7 +5,7 @@ import { Styles } from "./Styles";
 
 interface Props<T> {
   props: T;
-  children: JSX.Element | RenderProps;
+  children: JSX.Element | RenderProps<T>;
 }
 
 export const State = <T,>({ props, children, ...rest }: Props<T>) => {
