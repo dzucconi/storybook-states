@@ -5,7 +5,7 @@ import { styles as defaultStyles, StateStyles, Styles } from "./Styles";
 
 export interface Props<T> {
   states?: T[];
-  children: JSX.Element | RenderProps;
+  children: JSX.Element | RenderProps<T>;
   styles?: StateStyles;
 }
 

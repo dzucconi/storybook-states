@@ -1,7 +1,7 @@
-export type RenderProps = {
-  (props: any): JSX.Element;
+export type RenderProps<T> = {
+  (props: T): JSX.Element;
 };
 
-export const isRenderProps = (
-  children: JSX.Element | RenderProps
-): children is RenderProps => typeof children === "function";
+export const isRenderProps = <T>(
+  children: JSX.Element | RenderProps<T>
+): children is RenderProps<T> => typeof children === "function";
