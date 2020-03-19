@@ -10,7 +10,7 @@ export interface Props<T> {
 }
 
 export const States = <T,>({
-  states = [],
+  states = [{} as T],
   children,
   styles = defaultStyles,
   ...rest

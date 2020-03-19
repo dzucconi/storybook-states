@@ -35,7 +35,7 @@ export const Example = () => (
 );
 ```
 
-![Example](http://static.damonzucconi.com/_capture/FzbX9gN9Zdyl.png)
+![Example](http://static.damonzucconi.com/_capture/15NictAbjHIX.png)
 
 ## Interface
 

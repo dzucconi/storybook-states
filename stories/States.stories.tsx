@@ -2,16 +2,37 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 import { States } from "../src/States";
 
-export default {
-  title: "Button"
+export default { title: "Button" };
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  outlined?: boolean;
 };
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-const Button: React.FC<ButtonProps> = props => <button {...props} />;
+const Button: React.FC<ButtonProps> = ({ outlined, ...rest }) => (
+  <button
+    style={{
+      ...(outlined
+        ? { border: "1px solid black" }
+        : { border: "1px dotted gray" })
+    }}
+    {...rest}
+  />
+);
+
+export const EmptyExample = () => (
+  <States<ButtonProps>>
+    <Button onClick={action("clicked")}>Hello</Button>
+  </States>
+);
 
 export const SimpleExample = () => (
   <States<ButtonProps>
-    states={[{}, { title: "Button", tabIndex: 2 }, { autoFocus: true }]}
+    states={[
+      {},
+      { children: "Goodbye" },
+      { outlined: true },
+      { outlined: false }
+    ]}
   >
     <Button onClick={action("clicked")}>Hello</Button>
   </States>
@@ -19,11 +40,11 @@ export const SimpleExample = () => (
 
 export const RenderPropsExample = () => (
   <States<ButtonProps>
-    states={[{}, { title: "Button", tabIndex: 2 }, { autoFocus: true }]}
+    states={[{}, { children: "Goodbye" }, { outlined: true }]}
   >
-    {props => (
-      <Button onClick={action("clicked")} {...props}>
-        Hello
+    {({ children, ...rest }) => (
+      <Button onClick={action("clicked")} {...rest}>
+        {children || "Hello"}
       </Button>
     )}
   </States>
