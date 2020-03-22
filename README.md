@@ -17,18 +17,14 @@ yarn add storybook-states
 ## Usage
 
 ```tsx
-import React from "react";
-import { action } from "@storybook/addon-actions";
-import { States } from "storybook-states";
-
-export default { title: "Button" };
-
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
-const Button: React.FC<ButtonProps> = props => <button {...props} />;
-
 export const Example = () => (
   <States<ButtonProps>
-    states={[{}, { title: "Button", tabIndex: 2 }, { autoFocus: true }]}
+    states={[
+      {},
+      { children: "Goodbye" },
+      { outlined: true },
+      { outlined: false }
+    ]}
   >
     <Button onClick={action("clicked")}>Hello</Button>
   </States>
@@ -36,6 +32,8 @@ export const Example = () => (
 ```
 
 ![Example](http://static.damonzucconi.com/_capture/15NictAbjHIX.png)
+
+[View the example stories](https://github.com/dzucconi/storybook-states/blob/master/stories/States.stories.tsx) for more usage details.
 
 ## Interface
 
