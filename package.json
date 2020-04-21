@@ -27,7 +27,7 @@
     "react-dom": "16.13.1",
     "ts-loader": "6.2.2",
     "typescript": "3.8.3",
-    "semantic-release": "17.0.4"
+    "semantic-release": "17.0.7"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
