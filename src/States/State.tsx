@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { isRenderProps, RenderProps } from "../lib/isRenderProps";
 import { StateProps } from "./StateProps";
-import { Styles } from "./Styles";
+import { useStyles } from "./Styles";
 
 interface Props<T> {
   props: T;
@@ -9,7 +9,7 @@ interface Props<T> {
 }
 
 export const State = <T,>({ props, children, ...rest }: Props<T>) => {
-  const styles = useContext(Styles);
+  const styles = useStyles();
 
   const Specimen = isRenderProps(children)
     ? children(props)

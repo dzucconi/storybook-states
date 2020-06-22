@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { isRenderProps } from "../lib/isRenderProps";
 import { stringifyProps } from "./stringifyProps";
 import { omit } from "../lib/omit";
 import { isEmpty } from "../lib/isEmpty";
-import { Styles } from "./Styles";
+import { useStyles } from "./Styles";
 
 interface Props {
   children: any;
@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const StateProps: React.FC<Props> = ({ props, children }) => {
-  const styles = useContext(Styles);
+  const styles = useStyles();
   const childrenProps = omit(children.props, ...Object.keys(props || {}));
 
   return (
