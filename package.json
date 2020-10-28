@@ -23,8 +23,8 @@
     "@types/events": "3.0.0",
     "@types/react": "16.9.38",
     "babel-loader": "8.1.0",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
     "semantic-release": "17.0.8",
     "ts-loader": "7.0.5",
     "typescript": "3.9.5"
