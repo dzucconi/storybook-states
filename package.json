@@ -21,7 +21,7 @@
     "@storybook/addons": "5.3.19",
     "@storybook/react": "5.3.19",
     "@types/events": "3.0.0",
-    "@types/react": "16.9.38",
+    "@types/react": "16.14.6",
     "babel-loader": "8.1.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
