@@ -18,7 +18,7 @@
     "@babel/core": "7.14.6",
     "@storybook/addon-actions": "5.3.21",
     "@storybook/addon-links": "5.3.21",
-    "@storybook/addons": "5.3.21",
+    "@storybook/addons": "5.3.22",
     "@storybook/react": "5.3.21",
     "@types/events": "3.0.0",
     "@types/react": "16.14.8",
